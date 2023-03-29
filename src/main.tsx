@@ -5,7 +5,7 @@ import MainLayout from '@/presentation/layouts/main'
 import PodcastLayout from '@/presentation/layouts/podcast'
 import Episode from '@/presentation/pages/episode'
 import Podcast from '@/presentation/pages/podcast'
-import PodcastList from '@/presentation/pages/podcast-list'
+import PodcastListPage from '@/presentation/pages/podcast-list'
 
 const router = createBrowserRouter([
   {
@@ -14,7 +14,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <PodcastList />
+        element: <PodcastListPage />
       },
       {
         path: 'podcasts/:podcastId',
