@@ -11,23 +11,23 @@ const PodcastCard = ({ podcast }: Props) => {
     <Link to={`/podcasts/${podcast.id}`} style={{ textDecoration: 'none' }}>
       <CardMedia
         sx={{ borderRadius: '50%', cursor: 'pointer', margin: 'auto', width: '50%' }}
-        component="img"
+        component='img'
         image={podcast.image}
-        alt="cover image"
+        alt='cover image'
       />
       <Card sx={{ marginTop: '-100px' }}>
         <CardActionArea>
           <CardContent sx={{ paddingTop: '100px' }}>
-            <Typography variant="h6" component="h6" align='center'>
+            <Typography variant='h6' component='h6' align='center'>
               {podcast.title}
             </Typography>
-            <Typography variant="body2" color="text.secondary" align='center'>
+            <Typography variant='body2' color='text.secondary' align='center'>
               Author: {podcast.author}
             </Typography>
           </CardContent>
         </CardActionArea>
       </Card>
-    </ Link>
+    </Link>
   )
 }
 
