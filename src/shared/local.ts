@@ -3,14 +3,15 @@ import { LocalStorage } from '@/data/dtos/LocalStorage'
 export function get<T>(key: string): T | null {
   const data = localStorage.getItem(key)
   if (data !== null) {
+    const today = new Date()
     const parsedData = JSON.parse(data) as LocalStorage
-    if (parsedData.expiry >= (new Date()).getTime()) {
+    if (parsedData.expiry >= today.getTime()) {
       return JSON.parse(parsedData.value) as T
     } else {
       localStorage.removeItem(key)
     }
-  } 
-  
+  }
+
   return null
 }
 
