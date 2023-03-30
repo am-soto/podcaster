@@ -1,10 +1,19 @@
 import { PodcastHTTPRepository } from '@/data/repositories/PodcastHTTPRepository'
+import { PodcastLocalRepository } from '@/data/repositories/PodcastLocalRepository'
 import { Podcast } from '../models/Podcast'
 import { IPodcasts } from './IPodcasts'
 
 export class Podcasts implements IPodcasts {
-  private podcastsRepository = new PodcastHTTPRepository()
+  private podcastsHTTPRepository = new PodcastHTTPRepository()
+  private podcastsLocalRepository = new PodcastLocalRepository()
   async getAll(): Promise<Podcast[]> {
-    return await this.podcastsRepository.findAll()
+    const localPodcasts = this.podcastsLocalRepository.findAll()
+
+    if (localPodcasts.length === 0) {
+      const remotePodcasts = await this.podcastsHTTPRepository.findAll()
+      this.podcastsLocalRepository.saveAll(remotePodcasts)
+      return remotePodcasts
+    }
+    return localPodcasts
   }
 }
