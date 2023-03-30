@@ -13,8 +13,8 @@ export function podcastDetailToPodcast(podcastDetail: PodcastDetail): Podcast {
       return {
         id: result.trackId.toString() ?? '',
         title: result.trackName ?? '',
-        date: result.releaseDate ?? '',
-        duration: result.trackTimeMillis.toString() ?? '',
+        date: new Date(result.releaseDate).toLocaleString().split(',')[0] ?? '',
+        duration: new Date(result.trackTimeMillis).toISOString().slice(11, 19) ?? '',
         description: result.description ?? ''
       }
     })
