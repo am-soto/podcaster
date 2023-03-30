@@ -11,6 +11,7 @@ describe('PodcastListPage', () => {
         <PodcastListPage />
       </MemoryRouter>
     )
-    expect(screen.getByText(/Podcast List:/)).toBeTruthy()
+    expect(screen.getByText('0')).toBeTruthy()
+    expect(screen.getByLabelText(/Filter podcasts/)).toBeTruthy()
   })
 })
