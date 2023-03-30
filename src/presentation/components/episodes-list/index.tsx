@@ -29,7 +29,9 @@ const EpisodesList = ({ episodes }: Props) => {
         <TableBody>
           {episodes.map((episode) => (
             <TableRow key={episode.id}>
-              <TableCell><Link to={`/podcasts/${podcastId}/episodes/${episode.id}`}>{episode.title}</Link></TableCell>
+              <TableCell>
+                <Link to={`/podcasts/${podcastId}/episodes/${episode.id}`}>{episode.title}</Link>
+              </TableCell>
               <TableCell>{episode.date}</TableCell>
               <TableCell>{episode.duration}</TableCell>
             </TableRow>

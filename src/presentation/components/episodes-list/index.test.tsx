@@ -21,8 +21,6 @@ describe('EpisodesList', () => {
         <EpisodesList episodes={podcastDetailsModel.episodes} />
       </MemoryRouter>
     )
-    podcastDetailsModel.episodes.forEach(e => 
-      expect(screen.getByText(e.title)).toBeTruthy()
-      )
+    podcastDetailsModel.episodes.forEach((e) => expect(screen.getByText(e.title)).toBeTruthy())
   })
 })
