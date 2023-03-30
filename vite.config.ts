@@ -8,8 +8,9 @@ export default defineConfig({
   plugins: [react()],
   test: {
     globals: true,
-    environment: 'happy-dom',
-    include: ['**/*.test.{ts,tsx}']
+    environment: 'jsdom',
+    include: ['**/*.test.{ts,tsx}'],
+    setupFiles: ['./src/setup.ts']
   },
   resolve: {
     alias: [{ find: '@', replacement: path.resolve(__dirname, 'src') }],

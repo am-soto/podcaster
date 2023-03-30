@@ -6,6 +6,11 @@ import PodcastLayout from '@/presentation/layouts/podcast'
 import Episode from '@/presentation/pages/episode'
 import Podcast from '@/presentation/pages/podcast'
 import PodcastListPage from '@/presentation/pages/podcast-list'
+import { worker } from './mocks/browser'
+
+if (import.meta.env.VITE_MOCK_DATA) {
+  worker.start()
+}
 
 const router = createBrowserRouter([
   {
