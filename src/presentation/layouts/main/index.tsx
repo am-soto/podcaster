@@ -1,3 +1,4 @@
+import { Box } from '@mui/material'
 import { Link, Outlet } from 'react-router-dom'
 
 const MainLayout = () => {
@@ -6,9 +7,9 @@ const MainLayout = () => {
       <nav>
         <Link to='/'>Podcaster</Link>
       </nav>
-      <main>
+      <Box sx={{ margin: 'auto', maxWidth: '1440px', paddingX: '25px' }}>
         <Outlet />
-      </main>
+      </Box>
     </>
   )
 }

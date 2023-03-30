@@ -2,13 +2,13 @@ import { render, screen } from '@testing-library/react'
 import { MemoryRouter } from 'react-router-dom'
 import { describe, it, expect } from 'vitest'
 
-import PodcastList from './index'
+import PodcastListPage from './index'
 
-describe('PodcastList', () => {
+describe('PodcastListPage', () => {
   it('renders the page', () => {
     render(
       <MemoryRouter>
-        <PodcastList />
+        <PodcastListPage />
       </MemoryRouter>
     )
     expect(screen.getByText(/Podcast List:/)).toBeTruthy()
