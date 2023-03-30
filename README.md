@@ -19,3 +19,42 @@
 - [☄️ GitHub Actions](https://github.com/features/actions)
 - [🌐 Vercel](https://vercel.com/)
 - [🪤 MSW](https://mswjs.io/)
+
+## Comandos
+
+### Instalar dependencias
+```
+npm i
+```
+### Ejecutar en modo desarrollo
+```
+npm run dev
+```
+### Ejecutar en modo desarrollo con datos mockeados
+```
+npm run dev:mock
+```
+### Construcción de la aplicación para producción 
+```
+npm run build
+```
+### Ejecutar test unitarios
+```
+npm run test
+```
+### Ejecutar test unitarios con HMR
+```
+npm run test:watch
+```
+### Ejecutar ESLint
+```
+npm run lint
+```
+### Ejecutar ESLint con correcciones automáticas
+```
+npm run lint:fix
+```
+### Ejecutar Prettier
+```
+npm run format
+```
