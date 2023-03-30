@@ -1,10 +1,10 @@
-import { usePodcast } from '@/controller/usePodcast'
+import { usePodcasts } from '@/controller/usePodcasts'
 import Filter from '@/presentation/components/filter'
 import PodcastCardList from '@/presentation/components/podcast-card-list'
 import { Box } from '@mui/material'
 
 const PodcastListPage = () => {
-  const { filter, podcasts, saveFilter } = usePodcast()
+  const { filter, podcasts, saveFilter } = usePodcasts()
 
   return (
     <>
