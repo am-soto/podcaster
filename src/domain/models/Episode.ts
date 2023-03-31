@@ -4,4 +4,5 @@ export interface Episode {
   date: string
   duration: string
   description: string
+  audio: string
 }
