@@ -1,9 +1,10 @@
 # Podcaster
 
-🎧 Mini-aplicación para escuchar podcasts musicales.
+🎧 Mini-aplicación para escuchar podcasts musicales
 
 🚀 Desplegada automáticamente en [https://podcaster-psi.vercel.app/](https://podcaster-psi.vercel.app/)
 
+📜 Comprueba la evolución del repositorio en [commits](https://github.com/am-soto/podcaster/commits), [issues](https://github.com/am-soto/podcaster/issues) y [pull requests](https://github.com/am-soto/podcaster/pulls)
 
 ## Herramientas
 
@@ -19,6 +20,7 @@
 - [☄️ GitHub Actions](https://github.com/features/actions)
 - [🌐 Vercel](https://vercel.com/)
 - [🪤 MSW](https://mswjs.io/)
+- [🗳️ Recoil](https://recoiljs.org/)
 
 ## Comandos
 
