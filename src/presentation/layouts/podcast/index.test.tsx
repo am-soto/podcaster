@@ -1,4 +1,4 @@
-import { podcastModel } from '@/mocks/api/podcasts'
+import { podcastsModel } from '@/mocks/api/podcasts'
 import { render, screen } from '@testing-library/react'
 import { MemoryRouter } from 'react-router-dom'
 import { describe, it, expect, vi } from 'vitest'
@@ -12,14 +12,14 @@ describe('PodcastLayout', () => {
     return {
       ...mod,
       useParams: () => ({
-        podcastId: podcastModel[0].id
+        podcastId: podcastsModel[0].id
       })
     }
   })
   vi.mock('@/controller/usePodcast', async () => {
     return {
       usePodcast: () => ({
-        podcast: podcastModel[0]
+        podcast: podcastsModel[0]
       })
     }
   })
@@ -30,8 +30,8 @@ describe('PodcastLayout', () => {
         <PodcastLayout />
       </MemoryRouter>
     )
-    expect(screen.getByText(podcastModel[0].title)).toBeTruthy()
-    expect(screen.getByText(`by ${podcastModel[0].author}`)).toBeTruthy()
-    expect(screen.getByText(podcastModel[0].description)).toBeTruthy()
+    expect(screen.getByText(podcastsModel[0].title)).toBeTruthy()
+    expect(screen.getByText(`by ${podcastsModel[0].author}`)).toBeTruthy()
+    expect(screen.getByText(podcastsModel[0].description)).toBeTruthy()
   })
 })

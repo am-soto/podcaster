@@ -3,6 +3,7 @@ import EpisodesCounter from '@/presentation/components/episodes-counter'
 import EpisodesList from '@/presentation/components/episodes-list'
 import { useParams } from 'react-router-dom'
 import { Box } from '@mui/material'
+import EpisodesListSkeleton from '@/presentation/components/episodes-list-skeleton'
 
 const PodcastPage = () => {
   const { podcastId } = useParams()
@@ -14,7 +15,7 @@ const PodcastPage = () => {
       <EpisodesList episodes={podcast?.episodes} />
     </Box>
   ) : (
-    <></>
+    <EpisodesListSkeleton />
   )
 }
 

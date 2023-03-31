@@ -1,12 +1,12 @@
 import { podcastDetailsModel } from '@/mocks/api/podcastDetails'
-import { podcastModel } from '@/mocks/api/podcasts'
+import { podcastsModel } from '@/mocks/api/podcasts'
 import { describe, expect, it } from 'vitest'
 import { PodcastHTTPRepository } from './PodcastHTTPRepository'
 
 describe('PodcastHTTPRepository', () => {
   it('findAll', async () => {
     const podcastHTTPRepository = new PodcastHTTPRepository()
-    expect(await podcastHTTPRepository.findAll()).toEqual(podcastModel)
+    expect(await podcastHTTPRepository.findAll()).toEqual(podcastsModel)
   })
 
   it('findEpisodesById', async () => {
