@@ -1,4 +1,4 @@
-import { podcastModel } from '@/mocks/api/podcasts'
+import { podcastsModel } from '@/mocks/api/podcasts'
 import { render, screen } from '@testing-library/react'
 import { MemoryRouter } from 'react-router-dom'
 import { describe, it, expect } from 'vitest'
@@ -8,10 +8,10 @@ describe('PodcastCardList', () => {
   it('renders the component', () => {
     render(
       <MemoryRouter>
-        <PodcastCardList podcasts={podcastModel} />
+        <PodcastCardList podcasts={podcastsModel} />
       </MemoryRouter>
     )
-    podcastModel.forEach((podcast) => {
+    podcastsModel.forEach((podcast) => {
       const image = document.querySelector('img') as HTMLImageElement
       expect(screen.getByText(podcast.title)).toBeTruthy()
       expect(screen.getByText(`Author: ${podcast.author}`)).toBeTruthy()

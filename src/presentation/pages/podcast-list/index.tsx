@@ -9,7 +9,7 @@ const PodcastListPage = () => {
   const { filter, podcasts, saveFilter } = usePodcasts()
 
   return podcasts.length > 0 ? (
-    <>
+    <>SINSKELETON
       <Box display='flex' justifyContent='flex-end' mb={10}>
         <Filter quantity={podcasts.length} value={filter} onValueChange={saveFilter} />
       </Box>
@@ -17,6 +17,7 @@ const PodcastListPage = () => {
     </>
   ) : (
     <>
+    SKELETON
       <FilterSkeleton />
       <PodcastCardListSkeleton />
     </>

@@ -1,4 +1,4 @@
-export const podcastModel = [
+export const podcastsModel = [
   {
     id: '1678378239',
     image:
