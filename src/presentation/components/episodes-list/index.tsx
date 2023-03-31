@@ -6,9 +6,11 @@ import {
   TableContainer,
   TableHead,
   TableRow,
-  Paper
+  Paper,
+  Typography
 } from '@mui/material'
-import { Link, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
+import CustomLink from '../custom-link'
 
 interface Props {
   episodes: Episode[]
@@ -30,7 +32,9 @@ const EpisodesList = ({ episodes }: Props) => {
           {episodes.map((episode) => (
             <TableRow key={episode.id}>
               <TableCell>
-                <Link to={`/podcasts/${podcastId}/episodes/${episode.id}`}>{episode.title}</Link>
+                <CustomLink to={`/podcasts/${podcastId}/episodes/${episode.id}`}>
+                  <Typography color='primary'>{episode.title}</Typography>
+                </CustomLink>
               </TableCell>
               <TableCell>{episode.date}</TableCell>
               <TableCell>{episode.duration}</TableCell>
