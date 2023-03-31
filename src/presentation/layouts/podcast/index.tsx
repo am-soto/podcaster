@@ -11,7 +11,7 @@ const PodcastLayout = () => {
     <Grid container spacing={10} rowSpacing={10}>
       <Grid item xs={4}>
         {podcast !== null && (
-          <CustomLink to={`/podcast/${podcastId}`}>
+          <CustomLink to={`/podcasts/${podcastId}`}>
             <PodcastDetailsCard podcast={podcast} />
           </CustomLink>
         )}

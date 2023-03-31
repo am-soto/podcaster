@@ -17,7 +17,9 @@ const EpisodesPlayer = ({ episode }: Props) => {
         <Typography variant='h4' component='h4' mb={2}>
           {episode.title}
         </Typography>
-        <Typography variant='body2' dangerouslySetInnerHTML={{ __html: episode.description }} />
+        {episode.description.split('\n').map((chunk) => (
+          <Typography key={chunk} variant='body2' dangerouslySetInnerHTML={{ __html: chunk }} />
+        ))}
         <Divider sx={{ marginY: 2 }} />
         <Audio src={episode.audio} controls />
       </CardContent>

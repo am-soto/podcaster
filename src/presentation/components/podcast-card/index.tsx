@@ -16,16 +16,14 @@ const PodcastCard = ({ podcast }: Props) => {
         alt='cover image'
       />
       <Card sx={{ marginTop: '-100px' }}>
-        <CardActionArea>
-          <CardContent sx={{ paddingTop: '100px' }}>
-            <Typography variant='h6' component='h6' align='center'>
-              {podcast.title}
-            </Typography>
-            <Typography variant='body2' color='text.secondary' align='center'>
-              Author: {podcast.author}
-            </Typography>
-          </CardContent>
-        </CardActionArea>
+        <CardContent sx={{ paddingTop: '100px' }}>
+          <Typography variant='h6' component='h6' align='center'>
+            {podcast.title}
+          </Typography>
+          <Typography variant='body2' color='text.secondary' align='center'>
+            Author: {podcast.author}
+          </Typography>
+        </CardContent>
       </Card>
     </Link>
   )
