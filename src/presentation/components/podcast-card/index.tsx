@@ -1,5 +1,5 @@
 import { Podcast } from '@/domain/models/Podcast'
-import { Card, CardActionArea, CardContent, CardMedia, Typography } from '@mui/material'
+import { Card, CardContent, CardMedia, Typography } from '@mui/material'
 import { Link } from 'react-router-dom'
 
 interface Props {
@@ -16,16 +16,14 @@ const PodcastCard = ({ podcast }: Props) => {
         alt='cover image'
       />
       <Card sx={{ marginTop: '-100px' }}>
-        <CardActionArea>
-          <CardContent sx={{ paddingTop: '100px' }}>
-            <Typography variant='h6' component='h6' align='center'>
-              {podcast.title}
-            </Typography>
-            <Typography variant='body2' color='text.secondary' align='center'>
-              Author: {podcast.author}
-            </Typography>
-          </CardContent>
-        </CardActionArea>
+        <CardContent sx={{ paddingTop: '100px' }}>
+          <Typography variant='h6' component='h6' align='center'>
+            {podcast.title}
+          </Typography>
+          <Typography variant='body2' color='text.secondary' align='center'>
+            Author: {podcast.author}
+          </Typography>
+        </CardContent>
       </Card>
     </Link>
   )

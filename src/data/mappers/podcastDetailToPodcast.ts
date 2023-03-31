@@ -15,7 +15,8 @@ export function podcastDetailToPodcast(podcastDetail: PodcastDetail): Podcast {
         title: result.trackName ?? '',
         date: new Date(result.releaseDate).toLocaleString().split(',')[0] ?? '',
         duration: new Date(result.trackTimeMillis).toISOString().slice(11, 19) ?? '',
-        description: result.description ?? ''
+        description: result.description ?? '',
+        audio: result.episodeUrl ?? ''
       }
     })
   }

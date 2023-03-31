@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import MainLayout from '@/presentation/layouts/main'
 import PodcastLayout from '@/presentation/layouts/podcast'
-import Episode from '@/presentation/pages/episode'
+import EpisodePage from '@/presentation/pages/episode'
 import PodcastPage from '@/presentation/pages/podcast'
 import PodcastListPage from '@/presentation/pages/podcast-list'
 import { worker } from './mocks/browser'
@@ -31,7 +31,7 @@ const router = createBrowserRouter([
           },
           {
             path: 'episodes/:episodeId',
-            element: <Episode />
+            element: <EpisodePage />
           }
         ]
       }
