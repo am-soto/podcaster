@@ -2,7 +2,7 @@ import { usePodcast } from '@/controller/usePodcast'
 import EpisodesCounter from '@/presentation/components/episodes-counter'
 import EpisodesList from '@/presentation/components/episodes-list'
 import { useParams } from 'react-router-dom'
-import { Box } from '@mui/material'
+import { Box, Skeleton } from '@mui/material'
 
 const PodcastPage = () => {
   const { podcastId } = useParams()
@@ -14,7 +14,10 @@ const PodcastPage = () => {
       <EpisodesList episodes={podcast?.episodes} />
     </Box>
   ) : (
-    <></>
+    <Box>
+      <Skeleton variant='rounded' height={75} sx={{ marginBottom: 2 }} />
+      <Skeleton variant='rounded' height={1250} />
+    </Box>
   )
 }
 
