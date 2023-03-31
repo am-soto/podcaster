@@ -10,7 +10,13 @@ const PodcastCard = ({ podcast }: Props) => {
   return (
     <Link to={`/podcasts/${podcast.id}`} style={{ textDecoration: 'none' }}>
       <CardMedia
-        sx={{ borderRadius: '50%', cursor: 'pointer', margin: 'auto', width: '50%' }}
+        sx={{
+          aspectRatio: '1',
+          borderRadius: '50%',
+          cursor: 'pointer',
+          margin: 'auto',
+          width: '50%'
+        }}
         component='img'
         image={podcast.image}
         alt='cover image'

@@ -1,19 +1,13 @@
 import CustomLink from '@/presentation/components/custom-link'
-import { AppBar, Box, Toolbar, Typography } from '@mui/material'
+import NavBar from '@/presentation/components/nav-bar'
+import { Box } from '@mui/material'
 import { Outlet } from 'react-router-dom'
+import { RecoilRoot } from 'recoil'
 
 const MainLayout = () => {
   return (
-    <>
-      <AppBar position='static' color='transparent' sx={{ marginBottom: 5 }}>
-        <Toolbar variant='dense'>
-          <CustomLink to='/'>
-            <Typography variant='h6' color='primary' component='div'>
-              Podcaster
-            </Typography>
-          </CustomLink>
-        </Toolbar>
-      </AppBar>
+    <RecoilRoot>
+      <NavBar />
       <Box sx={{ margin: 'auto', maxWidth: '1440px', paddingX: '25px' }}>
         <Outlet />
       </Box>
@@ -26,7 +20,7 @@ const MainLayout = () => {
           🚀
         </CustomLink>
       </Box>
-    </>
+    </RecoilRoot>
   )
 }
 export default MainLayout
