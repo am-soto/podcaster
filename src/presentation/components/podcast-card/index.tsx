@@ -1,5 +1,5 @@
 import { Podcast } from '@/domain/models/Podcast'
-import { Card, CardActionArea, CardContent, CardMedia, Typography } from '@mui/material'
+import { Card, CardContent, CardMedia, Typography } from '@mui/material'
 import { Link } from 'react-router-dom'
 
 interface Props {
