@@ -21,6 +21,7 @@
 - [🌐 Vercel](https://vercel.com/)
 - [🪤 MSW](https://mswjs.io/)
 - [🗳️ Recoil](https://recoiljs.org/)
+- [🎭 Playwright](https://playwright.dev/)
 
 ## Comandos
 
@@ -47,6 +48,10 @@ npm run test
 ### Ejecutar test unitarios con HMR
 ```
 npm run test:watch
+```
+### Ejecutar test end to end
+```
+npm run test:e2e
 ```
 ### Ejecutar ESLint
 ```
