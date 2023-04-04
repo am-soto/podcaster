@@ -7,20 +7,24 @@ jobs:
     name: E2E tests
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - name: Clone repository
+        uses: actions/checkout@v3
+
+      - name: Use Node.js 16.x
+        uses: actions/setup-node@v3
         with:
-          node-version-file: '.nvmrc'
+          node-version: 16.x
 
       - name: Cache NPM dependencies
         uses: actions/cache@v3
         with:
           path: node_modules
-          key: ${{ runner.os }}-yarn-lock-${{ hashFiles('yarn.lock') }}
+          key: ${{ runner.os }}-package-lock-${{ hashFiles('package-lock.json') }}
 
       - name: Get installed Playwright version
         id: playwright-version
         run: echo "version=$(npm ls @playwright/test | grep @playwright | sed 's/.*@//')" >> $GITHUB_OUTPUT
+
       - uses: actions/cache@v3
         id: playwright-cache
         with:
@@ -36,7 +40,7 @@ jobs:
         run: npx playwright install-deps
 
       - name: Run Playwright tests
-        run: yarn playwright test
+        run: npm run test:e2e
       - uses: actions/upload-artifact@v3
         if: always()
         with:
