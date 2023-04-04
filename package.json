@@ -10,6 +10,7 @@
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest",
+    "test:e2e": "playwright test",
     "lint": "eslint src/**/*.{js,jsx,ts,tsx,json}",
     "lint:fix": "eslint --fix 'src/**/*.{js,jsx,ts,tsx,json}'",
     "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
@@ -24,6 +25,7 @@
     "recoil": "^0.7.7"
   },
   "devDependencies": {
+    "@playwright/test": "^1.32.2",
     "@testing-library/react": "^14.0.0",
     "@types/node": "^18.15.10",
     "@types/react": "^18.0.28",

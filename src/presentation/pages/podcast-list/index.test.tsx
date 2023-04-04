@@ -15,7 +15,6 @@ describe('PodcastListPage', () => {
     }
   })
   it('renders the page', async () => {
-    console.log('length', podcastsModel.length)
     render(
       <RecoilRoot>
         <MemoryRouter>
